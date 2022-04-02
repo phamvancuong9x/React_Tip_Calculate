@@ -26,16 +26,18 @@ const Button = (props) => {
   return <button className="">{props.name}</button>;
 };
 const Select = () => {
-  <React.Fragment>
-    <p className="select-title">Service quality</p>
-    <select>
-      <Option textContent="choose..." />
-      <Option textContent="30% - Outstanding" />
-      <Option textContent="20% - Good" />
-      <Option textContent="15% - It's OK" />
-      <Option textContent="5% - Terrible" />
-    </select>
-  </React.Fragment>;
+  return (
+    <React.Fragment>
+      <p className="select-title">Service quality</p>
+      <select>
+        <Option textContent="choose..." />
+        <Option textContent="30% - Outstanding" />
+        <Option textContent="20% - Good" />
+        <Option textContent="15% - It's OK" />
+        <Option textContent="5% - Terrible" />
+      </select>
+    </React.Fragment>
+  );
 };
 const Result = () => {
   return (
