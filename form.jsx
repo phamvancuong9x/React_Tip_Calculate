@@ -1,3 +1,6 @@
+const H1Title = (props) => {
+  return <h1>{props.content}</h1>;
+};
 const Input = (props) => {
   return (
     <div className="input-group">
@@ -22,10 +25,34 @@ const Option = (props) => {
 const Button = (props) => {
   return <button className="">{props.name}</button>;
 };
+const Select = () => {
+  <React.Fragment>
+    <p className="select-title">Service quality</p>
+    <select>
+      <Option textContent="choose..." />
+      <Option textContent="30% - Outstanding" />
+      <Option textContent="20% - Good" />
+      <Option textContent="15% - It's OK" />
+      <Option textContent="5% - Terrible" />
+    </select>
+  </React.Fragment>;
+};
+const Result = () => {
+  return (
+    <React.Fragment>
+      <div className="result">
+        Tip
+        <span className="number-money">$12</span>
+        each person
+      </div>
+      <Button name="Calculate" />
+    </React.Fragment>
+  );
+};
 function App() {
   return (
     <form className="container">
-      <h1>Tip Calculator</h1>
+      <H1Title content="Tip Calculator" />
       <Input
         id="bill-amount"
         type="text"
@@ -38,20 +65,8 @@ function App() {
         titleInput="Number of guests"
         classIcon="fa-solid fa-users"
       />
-      <p className="select-title">Service quality</p>
-      <select>
-        <Option textContent="choose..." />
-        <Option textContent="30% - Outstanding" />
-        <Option textContent="20% - Good" />
-        <Option textContent="15% - It's OK" />
-        <Option textContent="5% - Terrible" />
-      </select>
-      <div className="result">
-        Tip
-        <span className="number-money">$12</span>
-        each person
-      </div>
-      <Button name="Calculate" />
+      <Select />
+      <Result />
     </form>
   );
 }
