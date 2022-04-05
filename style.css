@@ -130,4 +130,32 @@ button {
 }
 .menu {
   display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.menu-item:first-child {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.menu-item:first-child:hover .submenu {
+  display: block;
+}
+.submenu {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  padding: 0;
+  width: 200px;
+}
+.Pokemon-Menu {
+  display: flex;
+}
+.item {
+  text-align: center;
+  border: 1px solid rgb(114, 113, 113);
+  margin: 0 10px;
+  border-radius: 4px;
 }

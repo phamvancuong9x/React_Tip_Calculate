@@ -124,9 +124,13 @@ const Pokemon = ({ name, image }) => {
   );
 };
 const PokemonList = ({ PokemonArray }) => {
-  return PokemonArray.map((value, index) => {
-    return <Pokemon key={index} name={value.name} image={value.image} />;
-  });
+  return (
+    <ul className="Pokemon-Menu">
+      {PokemonArray.map((value, index) => {
+        return <Pokemon key={index} name={value.name} image={value.image} />;
+      })}
+    </ul>
+  );
 };
 
 function App() {
